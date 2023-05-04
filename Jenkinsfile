@@ -3,7 +3,7 @@ pipeline {
     stages {
     stage('git clone') {
             steps {
-               git branch: 'development', url: 'https://github.com/aayushknoldus03/Capestone'
+              git branch: 'main', url: 'https://github.com/aayushknoldus03/finalcapestone'
             }
         }
        
