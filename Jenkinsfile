@@ -23,6 +23,6 @@ pipeline {
             subject: "Build is failed",
             body: "failed"
     }
-         
+        }    
     }
 }
