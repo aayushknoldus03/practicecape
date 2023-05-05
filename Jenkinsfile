@@ -5,14 +5,13 @@ pipeline {
             steps {
                git branch: 'development', url: 'https://github.com/aayushknoldus03/Capestone'
             }
-        }
-       
+         }
          stage('Generate Artifact') {
             steps {
                 sh 'pwd'
             }
         }
-        post{
+       post{
         success{
             mail to: "aayush.bisht@knoldus.com",
             subject: "Build is successfull",
