@@ -12,6 +12,17 @@ pipeline {
                 sh 'pwd'
             }
         }
+        post{
+        success{
+            mail to: "aayush.bisht@knoldus.com",
+            subject: "Build is successfull",
+            body: "success"
+        }
+    failure{
+      mail to: "aayush.bisht@knoldus.com",
+            subject: "Build is failed",
+            body: "failed"
+    }
          
     }
 }
