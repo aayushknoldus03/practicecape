@@ -11,6 +11,7 @@ pipeline {
                 sh 'pwd'
             }
         }
+    }
        post{
         success{
             mail to: "aayush.bisht@knoldus.com",
@@ -23,5 +24,5 @@ pipeline {
             body: "failed"
          }
        }    
-    }
+    
 }
