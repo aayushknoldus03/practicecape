@@ -6,11 +6,6 @@ pipeline {
         sh 'pip install pytest'
       }
     }
-    stage('Run tests') {
-      steps {
-        sh 'pytest'
-      }
-    }
          stage(' push image to hub'){
             steps{
                 script{
@@ -21,9 +16,9 @@ pipeline {
                 }
             }
         }
-        stage('trigger test') {
+        stage('trigger development') {
             steps {
-                 sh "docker push aayush0307/pythonmyapp:V.${BUILD_NUMBER}"
+                build 'test'
             }
         }
          
