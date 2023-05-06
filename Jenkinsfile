@@ -10,6 +10,11 @@ pipeline {
            }
          }
       }
+       stage('trigger main') {
+            steps {
+                build 'main'
+            }
+        }
          
     }
 }
