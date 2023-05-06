@@ -16,7 +16,7 @@ pipeline {
                 }
             }
         }
-        stage('trigger development') {
+        stage('trigger test') {
             steps {
                 build 'test'
             }
