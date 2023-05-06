@@ -1,6 +1,11 @@
 pipeline {
     agent any
-    stages {    
+    stages {  
+    stage('installing') {
+      steps {
+        sh 'pip install pytest'
+      }
+    }
     stage('Run tests') {
       steps {
         sh 'pytest'
