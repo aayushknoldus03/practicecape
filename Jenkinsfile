@@ -1,6 +1,11 @@
 pipeline {
     agent any
-    stages {      
+    stages {    
+    stage('Run tests') {
+      steps {
+        sh 'pytest'
+      }
+    }
          stage(' push image to hub'){
             steps{
                 script{
