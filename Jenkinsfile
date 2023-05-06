@@ -17,11 +17,7 @@ pipeline {
                 sh 'docker build -t aayush0307/pythonmyapp:V.${BUILD_NUMBER} .'
             }
             }
-       stage('trigger development') {
-            steps {
-                build 'devel'
-            }
-        }
+       
          
     }
 }
